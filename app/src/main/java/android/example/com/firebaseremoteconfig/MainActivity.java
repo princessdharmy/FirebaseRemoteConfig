@@ -18,14 +18,13 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
     private FirebaseRemoteConfig firebaseRemoteConfig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         //Loading the Config Parameters or instance variables
@@ -50,14 +49,12 @@ public class MainActivity extends AppCompatActivity {
         TextView textview = (TextView) findViewById(R.id.textView);
 
         //Get the values form Firebase remote configuration
-        String toolbarColor = firebaseRemoteConfig.getString("toolbar");
         String welcomeText = firebaseRemoteConfig.getString("welcome_text");
         String welcomeTextColor = firebaseRemoteConfig.getString("welcome_text_color");
         String layoutColor = firebaseRemoteConfig.getString("bg_color");
 
         // Set the properties from firebase remote configuration
         // If any value not set in firebase remote configuration then it gets from default set
-        toolbar.setBackgroundColor(Color.parseColor(toolbarColor));
         layout.setBackgroundColor(Color.parseColor(layoutColor));
         textview.setText(welcomeText);
         textview.setTextColor(Color.parseColor(welcomeTextColor));
