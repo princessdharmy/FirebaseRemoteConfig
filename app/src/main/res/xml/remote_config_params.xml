@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <defaultsMap>
     <entry>
-        <key>toolbar</key>
-        <value>#3F51B5</value>
-    </entry>
-    <entry>
         <key>welcome_text</key>
         <value>Welcome to Firebase RemoteConfig</value>
     </entry>
     <entry>
         <key>welcome_text_color</key>
-        <value>#FFDF1507</value>
+        <value>#FFDF15</value>
     </entry>
     <entry>
         <key>bg_color</key>
